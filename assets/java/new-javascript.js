@@ -45,9 +45,9 @@ function loadArticle() {
     // $(".lead").append(`<btn>` + url[counter] + `</btn><br>`);
     // $(".lead").append(imageArr[counter]  + `<br>`);
 
-    $(".lead").btnappend(headlineArr[counter] + `<br>`);
-    $(".lead").append(url[counter] + `<br>`);
-    $(".lead").append(imageArr[counter]  + `<br>`);
+    // $(".lead").btnappend(headlineArr[counter] + `<br>`);
+    // $(".lead").append(url[counter] + `<br>`);
+    // $(".lead").append(imageArr[counter]  + `<br>`);
   });
 }
 
