@@ -41,8 +41,12 @@ function loadArticle() {
       
 
     }
-    $(".lead").append(headlineArr[counter] + `<br>`);
-    $(".lead").append(`<btn>` + url[counter] + `</btn><br>`);
+    // $(".lead").append(`<button class='btn-btn-dark' href=` + headlineArr[counter] + `>` + `</button><br>`);
+    // $(".lead").append(`<btn>` + url[counter] + `</btn><br>`);
+    // $(".lead").append(imageArr[counter]  + `<br>`);
+
+    $(".lead").btnappend(headlineArr[counter] + `<br>`);
+    $(".lead").append(url[counter] + `<br>`);
     $(".lead").append(imageArr[counter]  + `<br>`);
   });
 }
@@ -89,7 +93,7 @@ window.__gcse = {
 
 // on page load, search for & display a random gif matching your search term using the Giphy API.
 // usage: 
-document.addEventListener('touchstart', onTouchStart, { passive: true } , function () {
+document.addEventListener('DOMContentLoaded', function () {
   q = "computer"; // search query
 
   request = new XMLHttpRequest();
