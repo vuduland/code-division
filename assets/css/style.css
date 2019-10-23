@@ -10,7 +10,7 @@
 }
 
 #footerOne {
-  
+
 }
 
 * {
@@ -26,6 +26,7 @@
 .footer-links{
   color: rgb(78, 73, 73);
   opacity: 0.7;
+  background-color: rgb(197, 197, 197);
 }
 
 #customSearch {
@@ -41,6 +42,11 @@
   /* color: rgb(71, 71, 71) */
 }
 
+.navbar {
+  opacity: 0.955;
+  background-color: rgb(255, 248, 248);
+
+}
 .nav-link {
   font-family: 'VT323', monospace;
   font-size: 1.5rem;
