@@ -1,41 +1,55 @@
 //===========================================================================================//
 
 
-var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=web+development&api-key=iXxrB5IFdP1u6aNOnFTRt1J9L3jYnjBJ";
+var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=computers+coding+javascript&api-key=iXxrB5IFdP1u6aNOnFTRt1J9L3jYnjBJ";
+
 function loadArticle() {
   $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function (results) {
-    var a = results;
+    var article = results.response.docs;
     console.log(results);
-    var article = { a: "response"};
     var headlineArr = [];
-    var headline = "";
     var randomNum = [];
+    var headlineDiv = $("#articles");
     for (var i = 0; i < 3; i++) {
       // console.log(i);
       // console.log(article);
       //tried my best to make sure of no duplicates, although it's still possible.
+
       randomNum[i] = Math.round(Math.random() * 10);
-      if (randomNum[i] !== randomNum[++i] && randomNum[i] !== randomNum[--i]) {
-         headlineArr[i] = article[randomNum[i]].headline.main;
-      } else if (randomNum[i] === randomNum[--i]) {
-        randomNum[i] = Math.round((Math.random * 10) % 2);
-        headlineArr[i] = article[randomNum[i]];
+
+      for (var j = 3; j > 0; j--) {
+        if (randomNum[i] === randomNum[j]) {
+          console.log("inside if statment " + i + " times");
+        }
       }
 
-      //generating the divs
-      document.createElement('article');
+      headlineArr[i] = article[randomNum[i]].headline.main;
+      // if (headlineArr[j] === headlineArr[i]) {
+      //   j++;
+      //   headlineArr[i] = headlineArr[j];
+      // } 
 
+      // if (randomNum[i] !== randomNum[++i] === randomNum[i] !== randomNum[--i]) {
+
+      // } else if (randomNum[i] === randomNum[--i] || randomNum[i] === randomNum[++i]) {
+      //   randomNum[i] = Math.round((Math.random * 10) % 2);
+      //   headlineArr[i] = article[randomNum[i]];
+      // }
+      //generating the divs
+      //document.createElement('article');
 
       console.log(randomNum);
-     
       console.log(headlineArr[i] + " = headline");
+
+      headlineDiv.append("<h3>" + headlineArr[i] + "</h3>");
 
     }
   });
 }
+
 loadArticle();
 // loadArticle();
 // $(document).ready();
