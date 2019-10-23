@@ -18,14 +18,15 @@ function loadArticle() {
       // console.log(article);
       //tried my best to make sure of no duplicates, although it's still possible.
 
-      randomNum[i] = Math.round(Math.random() * 10);
-
+      randomNum[i] = Math.round(Math.round(Math.random() * 100) % (Math.round(Math.random()*7)));
+      console.log(randomNum + " is random num")
       for (var j = 3; j > 0; j--) {
         if (randomNum[i] === randomNum[j]) {
+          //randomNum[i] = Math.round(Math.random() * 10);
           console.log("inside if statment " + i + " times");
         }
       }
-
+      console.log(randomNum[i]);
       headlineArr[i] = article[randomNum[i]].headline.main;
       // if (headlineArr[j] === headlineArr[i]) {
       //   j++;
