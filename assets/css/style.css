@@ -70,11 +70,11 @@ body {
 }
 
 
-.column {
+.column, #theVIDEO {
 
-  width: 33.33%;
-  margin: 10px;
-  margin-left: 300px;
+  width: 80%;
+  margin: auto;
+  /* margin-left: 300px; */
   padding: 20px;
   height: 300px;
 }

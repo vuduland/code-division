@@ -20,7 +20,7 @@ function loadArticle() {
 
       randomNum[i] = Math.round(Math.round(Math.random() * 100) % (Math.round(Math.random()*7)));
       console.log(randomNum + " is random num")
-      for (var j = 3; j > 0; j--) {
+      for (var j = 10; j > 0; j--) {
         if (randomNum[i] === randomNum[j]) {
           //randomNum[i] = Math.round(Math.random() * 10);
           console.log("inside if statment " + i + " times");
