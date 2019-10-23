@@ -9,17 +9,16 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=VT323&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/gif" href="assets\img\smallAstroSpin2.gif" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">  
   <script async src="async-ads.js"></script>
   <script async src="https://cse.google.com/cse.js?cx=016103869497562011073:yjrshszlo2l"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
   <link href="./assets/css/materialize.css">
-  <link href="./assets/css/new-style.css" rel="stylesheet">
+  <link href="./assets/css/style.css" rel="stylesheet">
   <title>${"code.Division"}</title>
   <!--changed title-->
 </head>
 
 <body>
-
   <div class="row">
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100%;" id="color-change">
       <img src="assets\img\oscil.webp" alt="oscilloscope" id="oscilloscope">
@@ -51,7 +50,6 @@
               <a class="dropdown-item" href="https://wesbos.com/courses/">Wesbos.com</a>
             </div>
           </li>
-
         </ul>
         <div>
 
@@ -68,7 +66,7 @@
     <div class="container">
       <h1 class="display-4">New york Times</h1>
       <div class="row">
-        <div id="articles" class="col-sm-4">
+        <div class="col-sm-4">
           <!-- will append this class of div with articles in it to the div class row above -->
         </div>
       </div>
@@ -78,57 +76,65 @@
   </div>
 
 
-  <div class="row">
-    <div class="column">
-      <div id="gif-cards">
-        <div class="card card-fixed text-center">
-          <div id="card-body" class="card-body">
-            <h5 class="card-title" style="color: gold">
-              do you like coding?
-            </h5>
-            <div id="gifComputer">
+
+  <div class="column">
+    <div id="gif-cards">
+      <div class="card card-fixed text-center">
+        <div id="card-body" class="card-body">
+          <h5 class="card-title" style="color: gold">do you like coding?</h5>
+          <div id="gifComputer">
+            <div id="gifComputer" style="width: 100%">
+
+            </div>
+            <div>
+              <a href="https://giphy.com/search/coding" class="btn btn-primary" id="gifBtn">Go to
+                Giphy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div id="gif-cards">
+          <div class="card card-fixed text-center">
+            <div class="card-body">
+              <h5 class="card-title" style="color: gold">do you like coding?</h5>
+              <div id="gifComputer" style="width: 100%">
+
+              </div>
               <div>
-                <a href="https://giphy.com/search/coding" class="btn btn-primary" id="gifBtn">Go to
-                  Giphy</a>
+                <a href="https://giphy.com/search/coding" class="btn btn-primary" style="z-index: 2;">Go
+                  to Giphy</a>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div id="gif-cards">
-        <div class="card card-fixed text-center">
-          <div id="card-body" class="card-body">
-            <h5 class="card-title" style="color: gold">do you like coding?</h5>
-            <div>
-              <a href="https://giphy.com/search/coding" class="btn btn-primary" style="z-index: 2;">Go
-                to Giphy</a>
+
+          <!-- <div class="card column" style="width: 18rem;">
+            <img src="../assets/img/Screen Shot 2019-10-12 at 1.30.56 PM.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"></p>
             </div>
-          </div>
+        </div> -->
         </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <script src="babel.config.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="./assets/java/new-javascript.js"></script>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+          </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+          </script>
+        <script src="./assets/java/new-javascript.js"></script>
 </body>
 
 
-
 <div class="footer">
-  <a class="footer-links" href="url"> Repos </a>
-  <a class="footer-links" href="url"> GitHub </a>
-  <a class="footer-links" href="url"> Links</a>
-</div>
+    <a class="footer-links" href="https://github.com/collections/clean-code-linters"> { cleanCodeLinters }</a>
+    <a class="footer-links" href="https://github.com/collections/design-essentials"> { Design Tools } </a>
+    <a class="footer-links" href="https://github.com/collections/devops-tools"> { DevOps Tools } </a>
+    <a class="footer-links" href="https://www.freecodecamp.org/learn/"> { freeCodeCamp } </a>
+    <a class="footer-links" href="https://github.com/collections/front-end-javascript-frameworks"> { Front-end JavaScript Frameworks } </a>
+    <a class="footer-links" href="https://github.com/collections/learn-to-code"> { Learn to Code } </a>
+    <a class="footer-links" href="https://github.com/collections/programming-languages"> { Programming Languages } </a>
+    <a class="footer-links" href="https://opensource.guide/"> { Open Source Guide }</a>
+  </div>
