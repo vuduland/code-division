@@ -13,47 +13,43 @@ function loadArticle() {
     var headlineArr = [];
     var randomNum = [];
     var headlineDiv = $("#articles");
-    for (var i = 0; i < 3; i++) {
-      // console.log(i);
-      // console.log(article);
-      //tried my best to make sure of no duplicates, although it's still possible.
+    var imageArr = [];
+    var counter = 0;
+    var image = "";
+    var url = []
+    for (var i = 0; i < 5; i++) {
 
-      randomNum[i] = Math.round(Math.round(Math.random() * 100) % (Math.round(Math.random()*7)));
-      console.log(randomNum + " is random num")
-      for (var j = 10; j > 0; j--) {
-        if (randomNum[i] === randomNum[j]) {
-          //randomNum[i] = Math.round(Math.random() * 10);
-          console.log("inside if statment " + i + " times");
-        }
-      }
-      console.log(randomNum[i]);
-      headlineArr[i] = article[randomNum[i]].headline.main;
-      // if (headlineArr[j] === headlineArr[i]) {
-      //   j++;
-      //   headlineArr[i] = headlineArr[j];
-      // } 
 
-      // if (randomNum[i] !== randomNum[++i] === randomNum[i] !== randomNum[--i]) {
+      randomNum[i] = Math.round(Math.random() * 10);
+      counter = randomNum[i];
+      // console.log(randomNum + " is random num");
+  
+      // headlineArr[i] = article.docs[i].headline.main;
+      // console.log(headlineArr[i]);
+                  
+      
+     
+      console.log(i);
+      console.log(article);
+      console.log(article[i].web_url);
+      console.log(article[counter].headline.main);
+      console.log(article[counter].multimedia[11].url);
+      headlineArr[i] = article[counter].headline.main;
+      url[i] = article[i].web_url;
+      imageArr[i] = article[counter].multimedia[11].url;
 
-      // } else if (randomNum[i] === randomNum[--i] || randomNum[i] === randomNum[++i]) {
-      //   randomNum[i] = Math.round((Math.random * 10) % 2);
-      //   headlineArr[i] = article[randomNum[i]];
-      // }
-      //generating the divs
-      //document.createElement('article');
-
-      console.log(randomNum);
-      console.log(headlineArr[i] + " = headline");
-
-      headlineDiv.append("<h3>" + headlineArr[i] + "</h3>");
+      
 
     }
+    $(".lead").append(headlineArr[counter] + `<br>`);
+    $(".lead").append(`<btn>` + url[counter] + `</btn><br>`);
+    $(".lead").append(imageArr[counter]  + `<br>`);
   });
 }
 
-loadArticle();
 // loadArticle();
-// $(document).ready();
+// loadArticle();
+$(document).ready(loadArticle());
 
 //===========================================================================================//
 
@@ -93,7 +89,7 @@ window.__gcse = {
 
 // on page load, search for & display a random gif matching your search term using the Giphy API.
 // usage: 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('touchstart', onTouchStart, { passive: true } , function () {
   q = "computer"; // search query
 
   request = new XMLHttpRequest();
