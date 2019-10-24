@@ -1,7 +1,7 @@
 //===========================================================================================//
 
 
-var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=computers+coding+javascript&api-key=iXxrB5IFdP1u6aNOnFTRt1J9L3jYnjBJ";
+var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=computers+coding&api-key=iXxrB5IFdP1u6aNOnFTRt1J9L3jYnjBJ";
 
 function loadArticle() {
   $.ajax({
@@ -45,9 +45,9 @@ function loadArticle() {
     // $(".lead").append(`<btn>` + url[counter] + `</btn><br>`);
     // $(".lead").append(imageArr[counter]  + `<br>`);
 
-    // $(".lead").btnappend(headlineArr[counter] + `<br>`);
-    // $(".lead").append(url[counter] + `<br>`);
-    // $(".lead").append(imageArr[counter]  + `<br>`);
+    $(".lead").btnappend(headlineArr[counter] + `<br>`);
+    $(".lead").append(url[counter] + `<br>`);
+    $(".lead").append(imageArr[counter]  + `<br>`);
   });
 }
 
