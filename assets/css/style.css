@@ -9,10 +9,6 @@
   font-size: 25px;
 }
 
-#footerOne {
-
-}
-
 * {
   box-sizing: border-box;
 }
@@ -28,13 +24,21 @@
   opacity: 0.7;
   background-color: rgb(197, 197, 197);
 }
+#carousel.inner {
+  z-index: -1;
+}
 
 #customSearch {
   vertical-align: bottom;
   width: 320px;
   height: 1rem;
   margin-bottom: 1rem;
+  z-index: 10;
 }
+.gsc-control-wrapper-cse:first-child  {
+  z-index: 10;
+}
+
 
 #nav-bar-name {
   font-family: 'VT323', monospace;
